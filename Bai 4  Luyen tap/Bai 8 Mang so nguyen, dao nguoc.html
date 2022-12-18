@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Đảo ngược dãy số</h1>
+<p id="display">0</p>
+<p style="color: red">* nhập vào dãy số cách nhau bởi dấu ","</p>
+<input id="input" type="text">
+<button onclick="onDisplay()">Nhập</button>
+<button onclick="reverseNums()">Đảo</button>
+<script>
+  function onDisplay() {
+    let inputNum = document.getElementById('input').value;
+    let arr = inputNum.split(',').map(Number);
+    document.getElementById('display').innerHTML = arr;
+    return arr
+  }
+  function reverseNums() {
+    let arrNum = onDisplay();
+    arrNum.reverse();
+    document.getElementById('display').innerHTML = arrNum;
+  }
+</script>
+</body>
+</html>

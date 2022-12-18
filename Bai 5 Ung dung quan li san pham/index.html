@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="app">
+  <div class="add-new-products">
+    <h1>Add New Products</h1>
+    <div class="new-products-input">
+      <input oninput="actionSearch()" id="input" placeholder="New Product" type="text">
+      <button onclick="addProducts()">ADD</button><br>
+      <label id="validate"></label>
+    </div>
+  </div>
+  <div class="display-all-products">
+    <h1>Display All Products</h1>
+    <table cellspacing="0" cellpadding="0">
+      <tr style="height: 60px">
+        <th>Products</th>
+        <th id="quantity" style="color: red" colspan="2"></th>
+      </tr>
+      <tbody id="drawTable">
+
+      </tbody>
+    </table>
+  </div>
+</div>
+<script src="myJS.js"></script>
+</body>
+</html>

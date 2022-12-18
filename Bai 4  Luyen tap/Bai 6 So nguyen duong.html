@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Kiểm tra số nguyên dương</h1>
+<p>Nhập 1 số</p>
+<input id="input" type="text">
+<button onclick="checkPositiveNum()">Kiểm tra</button>
+<h1>Kết quả: <span style="color: red" id="result"></span></h1>
+<script>
+function checkPositiveNum() {
+  let inputNum = + document.getElementById('input').value;
+  let result = document.getElementById('result');
+  if(inputNum > 0) {
+    result.innerHTML = inputNum + ' là số nguyên dương';
+  } else if(inputNum < 0){
+    result.innerHTML = inputNum + ' là số nguyên âm';
+  } else if(inputNum == 0) {
+    result.innerHTML = inputNum + ' là số 0';
+  }
+}
+</script>
+</body>
+</html>

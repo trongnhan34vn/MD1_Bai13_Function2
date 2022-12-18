@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Kiểm tra kí tự số</h1>
+<input id="input" type="text">
+<button onclick="checkNumber()">Kiểm tra</button>
+<h1 id="result"></h1>
+<script>
+  function checkNumber() {
+    let input = document.getElementById('input').value;
+    let checkNaN = isNaN(parseFloat(input));
+      console.log(checkNaN)
+      if(checkNaN) {
+          let result = document.getElementById('result');
+          result.innerHTML ='"' + input + '"' + ' KHÔNG PHẢI là số'
+      } else {
+          result.innerHTML = input + ' là số'
+      }
+  }
+</script>
+</body>
+</html>

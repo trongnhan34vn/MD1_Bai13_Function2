@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Kiểm tra k tự trong mảng</h1>
+<script>
+<!--  Viết hàm truyền vào mảng kí tự, 1 kí tự bất kì-->
+function checkApprearance(arr,a) {
+  // Tạo mảng trống chứa kết quả
+  let result = [];
+  for(i = 0; i < arr.length; i++) {
+    console.log(a==arr[i])
+    if(a == arr[i]) {
+      result.push(arr[i]);
+    } else {
+      result.push[-1];
+    }
+  }
+  console.log(result.length)
+  return result.length;
+}
+let arrCheck = ['nhân', '1', '2', 'nhân', 'nhân', 3, 4, 5, 6];
+document.write('Mảng ban đầu: '+' '+ arrCheck + '<br>'+ '<br>');
+let aCheck = 'nhân';
+document.write('Kí tự cần kiểm tra: ' + aCheck + '<br>'+ '<br>');
+document.write('Kết quả: ' + checkApprearance(arrCheck,aCheck));
+</script>
+</body>
+</html>

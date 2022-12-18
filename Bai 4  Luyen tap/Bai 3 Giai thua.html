@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính giai thừa</h1>
+<input id="input" type="text"> <span>!</span>
+<button onclick="calcFactorial()">Tính</button>
+<h1 id="result"></h1>
+<script>
+  function calcFactorial() {
+    let num = + document.getElementById('input').value;
+    let result = 1;
+    for(i = 1; i <= num; i++) {
+      result *= i;
+    }
+    document.getElementById('result').innerHTML = num + '!' + ' = ' + result;
+    document.getElementById('input').value = ' ';
+  }
+</script>
+</body>
+</html>

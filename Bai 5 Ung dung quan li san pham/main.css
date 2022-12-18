@@ -1,0 +1,63 @@
+.app {
+    width: 1200px;
+    margin: auto;
+}
+
+.new-products-input {
+    background-color: #F2F2F2;
+    padding: 30px 20px 50px 20px;
+    display: inline-block;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.new-products-input span {
+    display: block;
+    color: red;
+    padding: 10px 20px;
+}
+
+.new-products-input input {
+    width: 60%;
+    padding: 10px 20px;
+    border: 1px solid #E3E3E3;
+    outline: #E3E3E3;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.display-all-products table button,
+.new-products-input button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4FAF50;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.display-all-products table button:hover,
+.new-products-input button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.display-all-products table {
+    width: 60%;
+}
+
+.display-all-products table th:first-child {
+    text-align: left;
+}
+
+.display-all-products table th:nth-child(2) {
+    text-align: right;
+}
+
+.display-all-products table tbody:nth-child(2) tr:nth-child(even) {
+    background-color: #F2F2F2;
+}
+
+.display-all-products table td {
+    padding: 10px;
+}
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    td {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="app">
+  <h1>Tìm chòm sao và ngôi sao tương ứng</h1>
+  <p>Nhập ngôi sao:</p>
+  <input id="inputStar" type="text" oninput="actionSearch()">
+  <button onclick="findStar()">Tìm kiếm</button>
+  <table border="1" width="500px" style="margin-top: 40px">
+    <tr>
+      <th colspan="2">Danh sách ngôi sao và chòm sao</th>
+    </tr>
+    <tr>
+      <th>Ngôi sao</th>
+      <th>Chòm sao</th>
+    </tr>
+    <tbody id="drawTable">
+
+    </tbody>
+  </table>
+</div>
+<script>
+
+<!--  Input: Tạo 2 mảng cho trước-->
+  let arr = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+  let arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+//   Vẽ bảng
+function showTable() {
+  let drawTable = '';
+  for (let i = 0; i < arr.length; i++) {
+    drawTable += `<tr>
+                    <td>${arr[i]}</td><td>${arr2[i]}</td>
+                  </tr>`
+  }
+  document.getElementById('drawTable').innerHTML = drawTable;
+}
+showTable()
+
+// Search chính xác
+
+let listSearch = [];
+// Tạo hàm action search
+function actionSearch() {
+  let search = document.getElementById('inputStar').value;
+  if(search.trim()==='') {
+    showTable()
+  } else {
+    listSearch = [];
+    for (i = 0; i < arr.length; i++) {
+      if(arr[i].toLowerCase().search(search.toLowerCase())!==-1) {
+        listSearch.push(arr[i]);
+      }
+    }
+    showListSearch()
+  }
+}
+
+// Hàm hiện list search
+
+function showListSearch() {
+  let drawTable = '';
+  for (let i = 0; i < listSearch.length; i++) {
+    drawTable += `<tr>
+                    <td>${arr[i]}</td><td>${arr2[i]}</td>
+                  </tr>`
+  }
+  document.getElementById('drawTable').innerHTML = drawTable;
+}
+
+// Click để search
+
+function findStar() {
+  showListSearch()
+}
+
+</script>
+</body>
+</html>

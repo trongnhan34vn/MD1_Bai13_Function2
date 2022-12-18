@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Tính chu vi hình tròn</p>
+<input id="input" type="text">
+<button onclick="calcArea()">Tính chu vi</button>
+<h1 id="result"></h1>
+<script>
+<!--    Cách 1-->
+// function getInput() {
+//     let input = + document.getElementById('input').value;
+//     return input;
+// }
+//
+// function calcArea(r) {
+//     const PI = 3.14;
+//     let area = 2 * PI * r;
+//     console.log(area)
+//     return area;
+// }
+// function display(result) {
+//     document.getElementById('result').innerHTML = result
+// }
+//
+// function handle() {
+//     let input = getInput()
+//     let calc = calcArea(input);
+//     display(calc);
+
+// Cách 2
+function calcArea() {
+    let input = +document.getElementById('input').value;
+    const PI = 3.14;
+    let area = 2 * PI * input;
+    console.log(area)
+    document.getElementById('result').innerHTML = area;
+}
+
+</script>
+</body>
+</html>

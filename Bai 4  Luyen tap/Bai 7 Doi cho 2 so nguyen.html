@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Đổi chỗ 2 số</h1>
+<p>Nhập vào 2 số</p>
+<p id="display">0</p>
+<input id="input" type="text">
+<button onclick="onDisplay()">Nhập</button>
+<button onclick="reverseElements()">Đổi chỗ</button>
+
+<script>
+    <!--  Nhập vào 2 số-->
+    // Tạo mảng chứa 2 số
+    let arr = [];
+
+    function onDisplay() {
+        let inputNum = +document.getElementById('input').value;
+        let checkCoincide = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (inputNum == arr[i]) {
+                checkCoincide = true;
+                break;
+            }
+        }
+        if (checkCoincide) {
+            alert('Không được nhập trùng 2 số')
+        } else if (arr.length >= 2) {
+            alert('Không được nhập quá 2 số');
+        } else {
+            arr.push(inputNum);
+            document.getElementById('display').innerHTML = arr;
+        }
+    }
+
+    function reverseElements() {
+        arr.reverse();
+        document.getElementById('display').innerHTML = arr;
+    }
+</script>
+</body>
+</html>
